@@ -55,4 +55,10 @@ class CounterTest(TestCase):
         data = json.loads(result.data)
         self.assertEqual(data['foo2'], 0)
 
+    def test_delete_a_counter(self):
+        client = app.test_client()
+        result = client.post('/counters/foo3')
+        self.assertEqual(result.status_code, status.HTTP_201_CREATED)
+        result = client.delete('/counters/foo3')
+        self.assertEqual(result.status_code, status.HTTP_204_NO_CONTENT)
 
