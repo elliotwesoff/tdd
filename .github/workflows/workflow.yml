@@ -4,6 +4,7 @@ on:
     branches:
       - main
       - github_actions
+      - lab_4_task_2.4
   pull_request:
     branches:
       - main
@@ -23,6 +24,6 @@ jobs:
         run: |
           flake8 src --count --select=E9,F63,F7,F82 --show-source --statistics
           flake8 src --count --max-complexity=10 --max-line-length=127 --statistics
-      - name: Nosetests
-        run: nosetests -v --with-spec --spec-color --with-coverage --cover-package=app
-
+      - name: Run pylint
+        run: |
+          pylint src
