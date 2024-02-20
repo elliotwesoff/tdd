@@ -4,6 +4,7 @@ on:
     branches:
       - main
       - github_actions
+      - lab_4_task_2.4
   pull_request:
     branches:
       - main
