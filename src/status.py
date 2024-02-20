@@ -1,3 +1,7 @@
+'''
+Common HTTP status codes that are used for testing
+responses from our working endpoints.
+'''
 # HTTP status codes
 HTTP_200_OK = 200
 HTTP_201_CREATED = 201
